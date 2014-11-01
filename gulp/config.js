@@ -29,7 +29,7 @@ module.exports = {
   },
   browserify: {
     debug: true,
-    extensions: [".coffee"],
+    extensions: [".coffee", ".jsx"],
     bundleConfigs: [{
       entries: "./src/app.coffee",
       dest: dest + "/js",
