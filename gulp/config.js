@@ -35,5 +35,14 @@ module.exports = {
       dest: dest + "/js",
       name: 'app.js'
     }]
+  },
+  browserSync: {
+    server: {
+      baseDir: [dest, src]
+    },
+    files: [
+      dest + "/**",
+      "!" + dest + "/**.map"
+    ]
   }
 };
