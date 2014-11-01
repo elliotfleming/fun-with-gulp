@@ -4,7 +4,7 @@ var gconcat = require('gulp-concat');
 var stylus = require('gulp-stylus');
 var nib = require('nib');
 var streamFiles = require('stream-files');
-var styl = require('../config').stylus
+var styl = require('../config').stylus;
 
 gulp.task('stylus', function() {
   return gulp.src(styl.src)

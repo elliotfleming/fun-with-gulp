@@ -10,6 +10,12 @@ module.exports = {
     src: src + "/assets/**/*",
     dest: dest
   },
+  bower: {
+    styles: {
+      src: "bower_components/**/*.css",
+      dest: dest + "/styles"
+    }
+  },
   stylus: {
     src: src + "/**/*.styl",
     dest: dest + "/styles"
