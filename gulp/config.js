@@ -26,5 +26,14 @@ module.exports = {
     src: src + "/**/*.styl",
     dest: dest + "/styles",
     name: "app.css"
+  },
+  browserify: {
+    debug: true,
+    extensions: [".coffee"],
+    bundleConfigs: [{
+      entries: "./src/app.coffee",
+      dest: dest + "/js",
+      name: 'app.js'
+    }]
   }
 };

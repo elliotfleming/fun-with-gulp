@@ -1,3 +1,3 @@
 var gulp = require('gulp');
 
-gulp.task('build', ['assets', 'stylus', 'bower:styles', 'bower:scripts']);
+gulp.task('build', ['browserify', 'assets', 'stylus', 'bower:styles', 'bower:scripts']);

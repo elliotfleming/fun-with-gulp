@@ -46,6 +46,7 @@
     "gulp-util": "latest",
     "main-bower-files": "latest",
     "nib": "latest",
+    "pretty-hrtime": "latest",
     "reactify": "latest",
     "require-dir": "latest",
     "stream-files": "latest",
