@@ -14,6 +14,10 @@ module.exports = {
     styles: {
       src: "bower_components/**/*.css",
       dest: dest + "/styles"
+    },
+    scripts: {
+      src: "bower_components/**/*.js",
+      dest: dest + "/js"
     }
   },
   stylus: {
