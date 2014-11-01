@@ -4,18 +4,18 @@ var gconcat = require('gulp-concat');
 var filter = require('gulp-filter');
 var bowerFiles = require('main-bower-files');
 var streamFiles = require('stream-files');
-var scripts = require('../config').bower.scripts;
+var config = require('../config').bower.scripts;
 
 gulp.task('bower:scripts', function() {
   return gulp.src(bowerFiles())
     .pipe(filter('**/*.js'))
-    .pipe(gconcat('vendor.js'))
+    .pipe(gconcat(config.name))
     .pipe(
       changed(
-        scripts.dest,
+        config.dest,
         { hasChanged: changed.compareSha1Digest }
       )
     )
     .pipe(streamFiles())
-    .pipe(gulp.dest(scripts.dest));
+    .pipe(gulp.dest(config.dest));
 });

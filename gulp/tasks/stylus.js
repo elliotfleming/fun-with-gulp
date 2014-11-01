@@ -4,18 +4,18 @@ var gconcat = require('gulp-concat');
 var stylus = require('gulp-stylus');
 var nib = require('nib');
 var streamFiles = require('stream-files');
-var styl = require('../config').stylus;
+var config = require('../config').stylus;
 
 gulp.task('stylus', function() {
-  return gulp.src(styl.src)
+  return gulp.src(config.src)
     .pipe(stylus({ use: nib() }))
-    .pipe(gconcat('app.css'))
+    .pipe(gconcat(config.name))
     .pipe(
       changed(
-        styl.dest,
+        config.dest,
         { hasChanged: changed.compareSha1Digest }
       )
     )
     .pipe(streamFiles())
-    .pipe(gulp.dest(styl.dest));
+    .pipe(gulp.dest(config.dest));
 });
